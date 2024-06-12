@@ -1,0 +1,14 @@
+.swiper-button-next,
+.swiper-button-prev {
+    display: none;
+}
+
+/* Change the color of the pagination dots */
+.swiper-pagination-bullet {
+    background: #0000ff; /* Blue, or any color you prefer */
+}
+
+/* Change the color of the active pagination dot */
+.swiper-pagination-bullet-active {
+    background: #ddff00; /* Green, or any color you prefer */
+}
