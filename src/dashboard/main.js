@@ -35,8 +35,8 @@ const Dashboard = () => {
           <button
             className={
               active === "Dashboard"
-                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900"
-                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900 flex flex-row items-center "
+                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200"
+                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200 flex flex-row items-center "
             }
             onClick={() => setActive("Dashboard")}
           >
@@ -45,8 +45,8 @@ const Dashboard = () => {
           <button
             className={
               active === "Products"
-                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900"
-                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900 flex flex-row items-center "
+                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200"
+                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200 flex flex-row items-center "
             }
             onClick={() => setActive("Products")}
           >
@@ -55,8 +55,8 @@ const Dashboard = () => {
           <button
             className={
               active === "Orders"
-                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900"
-                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900 flex flex-row items-center "
+                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200"
+                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200 flex flex-row items-center "
             }
             onClick={() => setActive("Orders")}
           >
@@ -65,8 +65,8 @@ const Dashboard = () => {
           <button
             className={
               active === "Add Items"
-                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900"
-                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900 flex flex-row items-center "
+                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200"
+                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200 flex flex-row items-center "
             }
             onClick={() => setActive("Add Items")}
           >
@@ -75,8 +75,8 @@ const Dashboard = () => {
           <button
             className={
               active === "Membership"
-                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900"
-                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900 flex flex-row items-center "
+                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200"
+                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200 flex flex-row items-center "
             }
             onClick={() => setActive("Membership")}
           >
@@ -85,8 +85,8 @@ const Dashboard = () => {
           <button
             className={
               active === "Withdraw"
-                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900"
-                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900 flex flex-row items-center "
+                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200"
+                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200 flex flex-row items-center "
             }
             onClick={() => setActive("Withdraw")}
           >
@@ -95,8 +95,8 @@ const Dashboard = () => {
           <button
             className={
               active === "My Account"
-                ? "flex flex-row items-center text-center     bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900"
-                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900 flex flex-row items-center "
+                ? "flex flex-row items-center text-center     bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200"
+                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200 flex flex-row items-center "
             }
             onClick={() => setActive("My Account")}
           >
@@ -105,8 +105,8 @@ const Dashboard = () => {
           <button
             className={
               active === "Settings"
-                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900"
-                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-900 flex flex-row items-center "
+                ? "flex flex-row items-center text-center  bg-yellow-500 text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200"
+                : "bg-none text-white p-3 w-full rounded-0 font-semibold  hover:text-gray-200 flex flex-row items-center "
             }
             onClick={() => setActive("Settings")}
           >
