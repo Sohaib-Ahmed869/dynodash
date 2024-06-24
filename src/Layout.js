@@ -6,7 +6,6 @@ import Categories from "./Categories/page";
 import Careers from "./Careers/page";
 import Services from "./Services/page";
 import Contact from "./Contact/page";
-
 import Login from "./Login/page";
 import RegisterStart from "./Register/page";
 import Register from "./Register/register";
@@ -21,7 +20,6 @@ const Layout = () => {
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
-
         <Route path="/login" element={<Login />} />
         <Route path="/registeration" element={<RegisterStart />} />
         <Route path="/register" element={<Register />} />

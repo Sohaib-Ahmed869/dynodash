@@ -220,7 +220,7 @@ const Register = () => {
                 <p className="text-sm text-black">I am a vendor</p>
               </div>
             </div>
-            <button className="text-sm text-white bg-yellow-500 py-3 mt-2 w-48">
+            <button className="text-sm text-white bg-yellow-500 py-3 mt-2 w-48" onClick={() => window.location.href = "/multistep"}>
               Register
             </button>
           </div>

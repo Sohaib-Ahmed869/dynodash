@@ -42,7 +42,7 @@ const Login = () => {
               <p className="text-sm text-gray-400 underline">
                 Lost your password?
               </p>
-              <p className="text-sm text-gray-400 underline">
+              <p className="text-sm text-gray-400 underline cursor-pointer" onClick={() => window.location.href = "/register"}>
                 Create new Account!
               </p>
             </div>

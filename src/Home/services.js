@@ -22,6 +22,7 @@ const Services = () => {
           <button
             className=" text-white px-8 py-3 rounded-0 h-full flex justify-center items-center "
             style={{ backgroundColor: "#EFB007" }}
+            onClick={() => window.location.href= "/categories"}
           >
             GET STARTED <MdArrowForward className="ml-4" />
           </button>

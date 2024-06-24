@@ -49,7 +49,7 @@ const RegisterStart = () => {
                 throughout this website, to manage access to your account, and
                 for other purposes described in our privacy policy.
               </p>
-              <button className="text-sm text-white bg-yellow-500 py-3 mt-2 w-48">
+              <button className="text-sm text-white bg-yellow-500 py-3 mt-2 w-48" onClick={() => window.location.href = "/multistep"}>
                 Register
               </button>
             </div>

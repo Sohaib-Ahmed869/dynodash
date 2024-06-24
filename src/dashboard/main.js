@@ -22,7 +22,7 @@ import Membership from "./pricing";
 import AddItems from "./additems";
 
 const Dashboard = () => {
-  const [active, setActive] = useState("none");
+  const [active, setActive] = useState("Dashboard");
 
   return (
     <div>

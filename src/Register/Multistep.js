@@ -210,6 +210,7 @@ const Step4 = () => (
     <div className="flex flex-row items-center mt-5 justify-center">
       <button
         className="bg-yellow-500 py-3 px-8 text-sm text-white"
+        onClick={() => window.location.href = "/dashboard"}
       >
         GO TO DASHBOARD
       </button>

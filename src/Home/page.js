@@ -112,10 +112,14 @@ const Home = () => {
             <button
               className="text-white py-3 px-6 rounded-0 font-semibold hover:text-gray-900"
               style={{ backgroundColor: "#EFB007" }}
+              onClick={() => window.location.href = "/categories"}
             >
               Shop Now
             </button>
-            <button className="bg-transparent text-white py-3 px-6 rounded-0 ml-5 border border-white font-semibold hover:bg-white hover:text-gray-900">
+            <button
+              className="bg-transparent text-white py-3 px-6 rounded-0 ml-5 border border-white font-semibold hover:bg-white hover:text-gray-900"
+              onClick={() => window.location.href = "/contact"}
+            >
               Contact Us
             </button>
           </div>
