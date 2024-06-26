@@ -14,6 +14,7 @@ import Dashboard from "./dashboard/main";
 import Cart from "./Cart/page";
 import Checkout from "./Checkout/page";
 import Confirmation from "./Confirmation/page";
+import MembersDirectory from "./MembersDirectory/page";
 
 import AdminLogin from "./AdminScreens/AdminLogin";
 import ForgetPassword from "./AdminScreens/ForgetPassword";
@@ -38,6 +39,7 @@ const Layout = () => {
       <Route path="/cart" element={<Cart />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/confirmation" element={<Confirmation />} />
+      <Route path="/members" element={<MembersDirectory />} />
 
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/admin/forgetpassword" element={<ForgetPassword />} />
