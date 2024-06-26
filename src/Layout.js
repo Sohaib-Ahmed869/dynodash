@@ -11,6 +11,14 @@ import RegisterStart from "./Register/page";
 import Register from "./Register/register";
 import MultiStep from "./Register/Multistep";
 import Dashboard from "./dashboard/main";
+
+import AdminLogin from "./AdminScreens/AdminLogin";
+import ForgetPassword from "./AdminScreens/ForgetPassword";
+import OTPVerification from "./AdminScreens/OTPverification";
+import NewPassword from "./AdminScreens/newPassword";
+import AdminDashboard from "./AdminScreens/dashboard/main";
+
+
 const Layout = () => {
   return (
     <Routes>
@@ -25,6 +33,12 @@ const Layout = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/multistep" element={<MultiStep />} />
         <Route path="/dashboard" element={<Dashboard />} /> 
+
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/forgetpassword" element={<ForgetPassword />} />
+        <Route path="/admin/otpverification" element={<OTPVerification />} />
+        <Route path="/admin/newpassword" element={<NewPassword />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
     </Routes>
   );
 };
