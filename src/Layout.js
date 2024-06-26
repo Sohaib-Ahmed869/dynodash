@@ -11,6 +11,9 @@ import RegisterStart from "./Register/page";
 import Register from "./Register/register";
 import MultiStep from "./Register/Multistep";
 import Dashboard from "./dashboard/main";
+import Cart from "./Cart/page";
+import Checkout from "./Checkout/page";
+import Confirmation from "./Confirmation/page";
 
 import AdminLogin from "./AdminScreens/AdminLogin";
 import ForgetPassword from "./AdminScreens/ForgetPassword";
@@ -33,6 +36,9 @@ const Layout = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/multistep" element={<MultiStep />} />
         <Route path="/dashboard" element={<Dashboard />} /> 
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/confirmation" element={<Confirmation />} />
 
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/forgetpassword" element={<ForgetPassword />} />
