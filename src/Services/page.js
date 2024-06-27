@@ -129,22 +129,32 @@ const Services = () => {
           HOME <MdArrowForward className="ml-4" />{" "}
           <span className="ml-4">SERVICES</span>
         </button>
-        <div className="flex flex-col mt-20 mb-40 p-20">
+        <div className=" w-3/4 shadow-2xl justify-center items-center gap-4 p-6 mx-20 my-10 grid grid-cols-2">     
           {data.map((item) => (
-            <div className="w-1/2 flex flex-col text-left  mr-10 shadow-2xl bg-white">
-              <div className="p-5">
-                <img src={item.image} alt="" className="w-full" />
-                <h1 className=" text-gray-800 text-xl font-bold p-2 mt-0">
-                  {item.name}
-                </h1>
-                <h1 className=" text-black text-5xl font-bold p-2 mt-0">
-                  {item.rental_price}
-                </h1>
-                <p className="text-gray-400 text-sm mt-2 p-2">
-                  Pioneer of the equipment rental industry.
-                </p>
+            <div className="w-full flex flex-col items-center bg-white">
+              <div className="flex">
+                <img
+                  src={item.image}
+                  alt=""
+                  className="h-auto w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+                />
+                <div className="flex flex-col w-1/2 px-2">
+                  <h1 className=" text-gray-800 text-xl font-bold px-2 pt-2 mt-0">
+                    {item.name}
+                  </h1>
+                  <div className="flex justify-start">
+                    <p className="text-gray-400 text-sm px-2 pb-2">
+                      Pioneer of the equipment rental industry.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <h1 className=" text-[#efb007] text-3xl font-bold px-3 mt-0 w-3/10">
+                    ${item.rental_price}<span className="text-2xl text-black font-normal">/Day</span>
+                  </h1>
+                </div>
               </div>
-              <div className="line w-full bg-gray-200 h-1"></div>
+              {/* <div className="line w-full bg-gray-200 h-1"></div> */}
             </div>
           ))}
         </div>
@@ -153,6 +163,5 @@ const Services = () => {
     </div>
   );
 };
-
 
 export default Services;

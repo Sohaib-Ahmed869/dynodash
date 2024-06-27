@@ -1,6 +1,6 @@
 import React from "react";
 import { MdArrowForward } from "react-icons/md";
-import careerbg from "../Assets/careerbg.png";
+import cartbg from "../Assets/cartbg.png";
 import Navbar from "../Components/navbar";
 import Footer from "../Components/footer";
 import CartItems from "./CartItems";
@@ -42,7 +42,7 @@ const Cart = () => {
                 style={{
                     position: "relative",
                     width: "100%", // Set the width as needed
-                    backgroundImage: `url(${careerbg})`, // Set the background image
+                    backgroundImage: `url(${cartbg})`, // Set the background image
                     backgroundSize: "cover", // Cover the entire div
                     backgroundPosition: "center", // Center the background image
                     backgroundRepeat: "no-repeat",
@@ -50,7 +50,7 @@ const Cart = () => {
                 }}
                 className="h-48 flex flex-col justify-center items-center"
             ></div>
-            <div className="flex flex-col items-center justify-center mt-10">
+            <div className="flex flex-col items-center justify-center mt-10 w-full">
                 <button
                     className="text-white py-5 px-6 rounded-0 hover:text-gray-900 flex items-center"
                     style={{ backgroundColor: "#EFB007" }}
@@ -59,8 +59,8 @@ const Cart = () => {
                     <span className="ml-4">CART</span>
                 </button>
 
-                <div className="flex flex-row flex-wrap justify-center mt-10 mb-10">
-                    <CartItems data={data} />
+                <div className="flex flex-row flex-wrap justify-center mt-10 mb-10 w-1/2">
+                    <CartItems className="w-full" data={data} />
                 </div>
 
                 <div className="mb-20 flex flex-row justify-center items-center">

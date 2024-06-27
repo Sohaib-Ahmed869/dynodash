@@ -3,7 +3,9 @@ import Navbar from "../Components/navbar";
 import Footer from "../Components/footer";
 import { FaSearch } from "react-icons/fa";
 import { IoMdCheckmark } from "react-icons/io";
-import careerbg from "../Assets/careerbg.png";
+import membersbg from "../Assets/memberdirbg.png";
+import rentalitem1 from "../Assets/rentalitem1.png";
+
 
 // Sample data for members
 const members = [
@@ -57,7 +59,7 @@ const MembersDirectory = () => {
         style={{
           position: "relative",
           width: "100%",
-          backgroundImage: `url(${careerbg})`,
+          backgroundImage: `url(${membersbg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -85,7 +87,7 @@ const MembersDirectory = () => {
               className="flex items-center p-4 bg-white rounded-sm shadow-md border border-gray-200"
             >
               <img
-                src=""
+                src={rentalitem1}
                 alt={member.name}
                 className="w-12 h-12 rounded-full"
               />
