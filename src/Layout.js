@@ -16,6 +16,7 @@ import Checkout from "./Checkout/page";
 import Confirmation from "./Confirmation/page";
 import MembersDirectory from "./MembersDirectory/page";
 import Details from "./Details/page";
+import ExcavatorRent from "./ExcavatorRent/page";
 
 import AdminLogin from "./AdminScreens/AdminLogin";
 import ForgetPassword from "./AdminScreens/ForgetPassword";
@@ -42,6 +43,7 @@ const Layout = () => {
       <Route path="/confirmation" element={<Confirmation />} />
       <Route path="/members" element={<MembersDirectory />} />
       <Route path="/details" element={<Details />} />
+      <Route path="/excavatorrent" element={<ExcavatorRent />} />
 
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/admin/forgetpassword" element={<ForgetPassword />} />
