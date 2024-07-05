@@ -6,6 +6,12 @@ import { MdSearch } from "react-icons/md";
 import { MdShoppingCart } from "react-icons/md";
 
 const Navbar = () => {
+  const [selectedOption, setSelectedOption] = React.useState("");
+
+  const handleSelectChange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+
   return (
     <div className="navbar flex justify-between items-center">
       <img
@@ -20,17 +26,54 @@ const Navbar = () => {
       >
         <img src={contact} alt="Contact" />
       </button>
-      <div className="flex items-center justify-center cursor-pointer">
-        <p className="text-black font-semibold">MENU</p>
-        <FaChevronDown className="text-black ml-2" />
+      <div class="group relative cursor-pointer">
+        <div class="flex items-center justify-between bg-white px-4">
+          <a
+            class="menu-hover my-2 py-2 text-base font-medium text-black lg:mx-4"
+          >
+            MENU
+          </a>
+          <span>
+            <FaChevronDown className="text-black font-bold" />
+          </span>
+        </div>
       </div>
-      <div className="flex items-center justify-center cursor-pointer">
-        <p className="text-black font-semibold">EQUIPMENTS</p>
-        <FaChevronDown className="text-black ml-2" />
+      <div class="group relative cursor-pointer">
+        <div class="flex items-center justify-between bg-white px-4">
+          <a
+            class="menu-hover my-2 py-2 text-base font-medium text-black lg:mx-4"
+          >
+            EQUIPMENTS
+          </a>
+          <span>
+            <FaChevronDown className="text-black font-bold" />
+          </span>
+        </div>
+        <div class="invisible absolute z-50 flex w-full flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
+          <a class="my-2 block border-b border-gray-100 py-1 font-semibold text-sm text-gray-500 hover:text-black md:mx-2" onClick={() => window.location.href = "/excavatorrent"}>
+            EXCAVATORS ON RENT
+          </a>
+        </div>
       </div>
-      <div className="flex items-center justify-center cursor-pointer">
-        <p className="text-black font-semibold">PAGES</p>
-        <FaChevronDown className="text-black ml-2" />
+      <div class="group relative cursor-pointer">
+        <div class="flex items-center justify-between bg-white px-4">
+          <a
+            class="menu-hover my-2 py-2 text-base font-medium text-black lg:mx-4"
+          >
+            PAGES
+          </a>
+          <span>
+            <FaChevronDown className="text-black font-bold" />
+          </span>
+        </div>
+        <div class="invisible absolute z-50 flex w-full flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
+          <a class="my-2 block border-b border-gray-100 py-1 font-semibold text-sm text-gray-500 hover:text-black md:mx-2" onClick={() => window.location.href = "/members"}>
+            MEMBERS DIRECTORY
+          </a>
+          <a class="my-2 block border-b border-gray-100 py-1 font-semibold text-sm text-gray-500 hover:text-black md:mx-2" onClick={() => window.location.href = "/services"}>
+            SERVICES
+          </a>
+        </div>
       </div>
       <div className="flex items-center justify-center cursor-pointer">
         <p
