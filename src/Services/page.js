@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Navbar from "../Components/navbar";
-import servicesbg from "../Assets/servicesbg.png";
+import equipmentbg from "../Assets/equipment_machinery.png"
 import Footer from "../Components/footer";
 import { MdArrowForward } from "react-icons/md";
 import rentalitem1 from "../Assets/rentalitem1.png";
@@ -113,7 +113,7 @@ const Services = () => {
         style={{
           position: "relative",
           width: "100%", // Set the width as needed
-          backgroundImage: `url(${servicesbg})`, // Set the background image
+          backgroundImage: `url(${equipmentbg})`, // Set the background image
           backgroundSize: "cover", // Cover the entire div
           backgroundPosition: "center", // Center the background image
           backgroundRepeat: "no-repeat",

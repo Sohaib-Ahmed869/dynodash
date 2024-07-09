@@ -1,22 +1,15 @@
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
 
 const FilterPanel = () => {
   const [priceRange, setPriceRange] = useState([125, 1250]);
   const [weightRange, setWeightRange] = useState([1, 12]);
   const [depthRange, setDepthRange] = useState([4, 15]);
 
-  const handleRangeChange = (setRange, e) => {
-    const { value, dataset } = e.target;
-    setRange((prevRange) => {
-      const newRange = [...prevRange];
-      newRange[dataset.index] = Number(value);
-      return newRange;
-    });
-  };
-
   return (
-    <div className="p-4 border border-gray-200 w-full shadow">
+    <div className="p-4 border border-gray-100 w-full shadow">
       <h2 className="text-xl font-semibold mb-4">Refine Search</h2>
 
       <div className="mb-4">
@@ -48,60 +41,50 @@ const FilterPanel = () => {
       </div>
 
       <div className="mb-4">
-        <h3 className="text-sm font-medium text-gray-700 mb-2">Price</h3>
+        <h3 className="text-sm font-bold text-gray-700 mb-2">Price</h3>
         <div className="flex items-center">
-          <input
-            type="range"
-            min="125"
-            max="1250"
-            value={priceRange[0]}
-            data-index="0"
-            onChange={(e) => handleRangeChange(setPriceRange, e)}
-            className="mr-2"
-          />
-          <input
-            type="range"
-            min="125"
-            max="1250"
-            value={priceRange[1]}
-            data-index="1"
-            onChange={(e) => handleRangeChange(setPriceRange, e)}
-            className="ml-2"
+          <Slider
+            min={125}
+            max={1250}
+            defaultValue={priceRange}
+            onChange={setPriceRange}
+            allowCross={true}
+            range
+            trackStyle={[{ backgroundColor: "#efb007" }]}
+            handleStyle={[
+              { borderColor: "#f6f6f6", border: "1px solid #c6c6c6", backgroundColor: "#f6f6f6", boxShadow: "0px 0px 6px #c6c6c6" },
+              { borderColor: "#f6f6f6", border: "1px solid #c6c6c6", backgroundColor: "#f6f6f6", boxShadow: "0px 0px 6px #c6c6c6" },
+            ]}
           />
         </div>
-        <div className="flex justify-between text-sm mt-2">
-          <span>
+        <div className="flex justify-center items-center text-sm mt-2">
+          <span style={{ textDecoration: "underline" }}>
             Range from {priceRange[0]} to {priceRange[1]}
           </span>
         </div>
       </div>
 
       <div className="mb-4">
-        <h3 className="text-sm font-medium text-gray-700 mb-2">
+        <h3 className="text-sm font-bold text-gray-700 mb-2">
           Operating Weight
         </h3>
         <div className="flex items-center">
-          <input
-            type="range"
-            min="1"
-            max="12"
-            value={weightRange[0]}
-            data-index="0"
-            onChange={(e) => handleRangeChange(setWeightRange, e)}
-            className="mr-2"
-          />
-          <input
-            type="range"
-            min="1"
-            max="12"
-            value={weightRange[1]}
-            data-index="1"
-            onChange={(e) => handleRangeChange(setWeightRange, e)}
-            className="ml-2"
+          <Slider
+            min={1}
+            max={12}
+            defaultValue={weightRange}
+            onChange={setWeightRange}
+            allowCross={true}
+            range
+            trackStyle={[{ backgroundColor: "#efb007" }]}
+            handleStyle={[
+              { borderColor: "#f6f6f6", border: "1px solid #c6c6c6", backgroundColor: "#f6f6f6", boxShadow: "0px 0px 6px #c6c6c6" },
+              { borderColor: "#f6f6f6", border: "1px solid #c6c6c6", backgroundColor: "#f6f6f6", boxShadow: "0px 0px 6px #c6c6c6" },
+            ]}
           />
         </div>
-        <div className="flex justify-between text-sm mt-2">
-          <span>
+        <div className="flex justify-center items-center text-sm mt-2">
+          <span style={{ textDecoration: "underline" }}>
             Range from {weightRange[0]} to {weightRange[1]}
           </span>
         </div>
@@ -112,27 +95,22 @@ const FilterPanel = () => {
           Digging Depth
         </h3>
         <div className="flex items-center">
-          <input
-            type="range"
-            min="4"
-            max="15"
-            value={depthRange[0]}
-            data-index="0"
-            onChange={(e) => handleRangeChange(setDepthRange, e)}
-            className="mr-2"
-          />
-          <input
-            type="range"
-            min="4"
-            max="15"
-            value={depthRange[1]}
-            data-index="1"
-            onChange={(e) => handleRangeChange(setDepthRange, e)}
-            className="ml-2"
+          <Slider
+            min={4}
+            max={15}
+            defaultValue={depthRange}
+            onChange={setDepthRange}
+            allowCross={true}
+            range
+            trackStyle={[{ backgroundColor: "#efb007" }]}
+            handleStyle={[
+              { borderColor: "#f6f6f6", border: "1px solid #c6c6c6", backgroundColor: "#f6f6f6", boxShadow: "0px 0px 6px #c6c6c6" },
+              { borderColor: "#f6f6f6", border: "1px solid #c6c6c6", backgroundColor: "#f6f6f6", boxShadow: "0px 0px 6px #c6c6c6" },
+            ]}
           />
         </div>
-        <div className="flex justify-between text-sm mt-2">
-          <span>
+        <div className="flex justify-center items-center text-sm mt-2">
+          <span style={{ textDecoration: "underline" }}>
             Range from {depthRange[0]} to {depthRange[1]}
           </span>
         </div>

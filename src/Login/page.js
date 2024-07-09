@@ -9,11 +9,11 @@ const Login = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col items-center text-left mt-10 p-20">
-        <div className="items-start text-left">
-          <p className="text-2xl font-bold text-black">Login</p>
+      <div className="flex flex-col items-center text-left mt-2 p-20">
+        <div className="items-start text-left w-1/3">
+          <p className="text-2xl font-semibold text-black">Login</p>
         </div>
-        <div className="px-10 shadow-2xl rounded-lg text-left mt-10 w-1/3 border border-gray-300 py-20">
+        <div className="px-10 shadow-2xl rounded-0 text-left w-1/3 border border-gray-300 py-10 mt-5">
           <p className="text-sm text-black">
             Username or email address{" "}
             <span className="text-red-500 font-bold">*</span>
@@ -35,16 +35,16 @@ const Login = () => {
               <input type="checkbox" className="mr-2" />
               <p className="text-sm text-black">Remember me</p>
             </div>
-            <button className="text-sm text-white bg-yellow-500 p-2 mt-4">
+            <button className="text-sm text-white bg-yellow-500 p-2 mt-4 w-1/2">
               Login
             </button>
-            <div className="flex flex-row items-center mt-4 justify-between">
-              <p className="text-sm text-gray-400 underline">
+            <div className="flex flex-row items-center mt-4 justify-end">
+              {/* <p className="text-sm text-gray-400 underline">
                 Lost your password?
-              </p>
+              </p> */}
               <p
                 className="text-sm text-gray-400 underline cursor-pointer"
-                onClick={() => (window.location.href = "/register")}
+                onClick={() => (window.location.href = "/registeration")}
               >
                 Create new Account!
               </p>
