@@ -68,10 +68,10 @@ const Card = ({ item }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-1/4">
-        <div className="p-3 border-l border-slate-300 border-b flex flex-row item-center justify-center">
+      <div className="flex flex-col w-1/4 h-full border-l border-slate-300">
+        <div className="p-3 h-3/4 flex flex-row item-center justify-center">
           <div className="flex flex-col item-center justify-center pr-2">
-            <p className="text-2xl font-bold text-[#F65D10]">
+            <p className="text-2xl font-bold text-[#efb007]">
               ${item.rental_price * 0.8}
             </p>
             <p className="text-lg font text-gray-500 line-through text-right">
@@ -79,7 +79,7 @@ const Card = ({ item }) => {
             </p>
           </div>
         </div>
-        <button className="flex flex-row items-center text-center justify-center bg-black text-white p-3 w-full rounded-0 border border-white text-sm font-semibold hover:bg-white hover:text-gray-900">
+        <button className="flex flex-row items-center text-center justify-center bg-[#efb007] text-white p-3 w-full h-1/4 rounded-0 border border-white text-sm font-semibold hover:bg-black transition duration-200">
           BOOK NOW
         </button>
       </div>

@@ -173,7 +173,7 @@ const Categories = () => {
                   <p className="text-sm text-gray-500 mb-2">
                     {item.description}
                   </p>
-                  <button className="text-black rounded-0 hover:text-gray-900 flex items-center">
+                  <button className="text-black rounded-0 hover:text-gray-900 flex items-center" onClick={() => window.location.href = "/details"}>
                     READ MORE{" "}
                     <MdArrowForward className="ml-1 text-yellow-500" />
                   </button>

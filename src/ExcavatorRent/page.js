@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "../Components/navbar";
 import Footer from "../Components/footer";
 import FilterPanel from "./filterPanel";
@@ -123,7 +124,17 @@ const data = [
   },
 ];
 
+const itemsPerPage = 6;
+let totalCards = data.length;
+
 const ExcavatorRent = () => {
+  const [priceRange, setPriceRange] = useState([0, 500]);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const totalPages = Math.ceil(totalCards / itemsPerPage);
+
   return (
     <div>
       <Navbar />
@@ -152,19 +163,51 @@ const ExcavatorRent = () => {
         <div className="w-full flex justify-center items-center">
           <div className="flex w-3/4 mb-20 gap-10">
             <div className="flex flex-col w-1/3 ">
-              {/* filter */}
-              <FilterPanel />
+              <FilterPanel
+                priceRange={priceRange}
+                setPriceRange={setPriceRange}
+              />
             </div>
             <div className="flex flex-col w-2/3 gap-14">
               <div className="w-full">
-                {/* search */}
                 <Search />
-                </div>
+              </div>
               <div className="flex flex-col gap-6">
-                {/* cards */}
                 {data.map((item) => (
                   <Card item={item} />
                 ))}
+              </div>
+              <div className="flex flex-col justify-between items-center w-1/2 px-4">
+                <div className="flex w-full items-start justify-start mb-5">
+                  <p className="text-gray-600">
+                    Viewing {indexOfFirstItem + 1} -{" "}
+                    {Math.min(indexOfLastItem, totalCards)} of {totalCards}{" "}
+                    active members
+                  </p>
+                </div>
+                <div className="flex items-center space-x-2">
+                  {Array.from({ length: totalPages }, (_, index) => (
+                    <button
+                      key={index + 1}
+                      onClick={() => setCurrentPage(index + 1)}
+                      className={`px-3 py-1 rounded-md ${
+                        currentPage === index + 1
+                          ? "bg-yellow-500 text-white"
+                          : "bg-gray-200 text-gray-700"
+                      }`}
+                    >
+                      {index + 1}
+                    </button>
+                  ))}
+                  {currentPage < totalPages && (
+                    <button
+                      onClick={() => setCurrentPage(currentPage + 1)}
+                      className="px-3 py-1 rounded-md bg-gray-200 text-gray-700"
+                    >
+                      →
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </div>

@@ -24,6 +24,8 @@ import OTPVerification from "./AdminScreens/OTPverification";
 import NewPassword from "./AdminScreens/newPassword";
 import AdminDashboard from "./AdminScreens/dashboard/main";
 
+import Error404 from "./Error/page";
+
 const Layout = () => {
   return (
     <Routes>
@@ -50,6 +52,8 @@ const Layout = () => {
       <Route path="/admin/otpverification" element={<OTPVerification />} />
       <Route path="/admin/newpassword" element={<NewPassword />} />
       <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
+      <Route path="*" element={<Error404 />} />
     </Routes>
   );
 };
