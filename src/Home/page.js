@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import home1 from "../Assets/home1.png";
+import home1 from "../Assets/home_background.png";
 import home1bottom from "../Assets/home1bottom.png";
 import aboutusicon from "../Assets/aboutusicon.png";
 import { MdArrowForward } from "react-icons/md";
@@ -9,6 +9,9 @@ import HowItWorks from "./howItWorks";
 import Section from "./section";
 import Cards from "./cards";
 import Testimonials from "./testimonials";
+import { Calendar } from "react-date-range";
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
 import Navbar from "../Components/navbar";
 import Footer from "../Components/footer";
 
@@ -84,6 +87,10 @@ const Home = () => {
   ];
 
   const [date, setDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+
+  const [show, doShow] = useState(false);
+  const [showEnd, doShowEnd] = useState(false);
   return (
     <div>
       <Navbar />
@@ -101,24 +108,24 @@ const Home = () => {
       >
         <div className="w-1/2 text-center p-10">
           <h1 className="text-white text-5xl font-bold p-10">
-            Convenient & Simple Ways & to Choose the Right Equipment
+            Power at your Fingertips
           </h1>
-          <p className="text-white">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. <br></br>Lorem Ipsum has been the industry's standard
-            dummy text ever since
+          <p className="text-white text-2xl">
+            Easy online rentals of heavy machinery, plus premium lubrication
+            <br></br>
+            products and spare parts for your construction and industrial needs.
           </p>
           <div className="flex justify-center items-center mt-10">
             <button
               className="text-white py-3 px-6 rounded-0 font-semibold hover:text-gray-900"
               style={{ backgroundColor: "#EFB007" }}
-              onClick={() => window.location.href = "/categories"}
+              onClick={() => (window.location.href = "/categories")}
             >
               Shop Now
             </button>
             <button
               className="bg-transparent text-white py-3 px-6 rounded-0 ml-5 border border-white font-semibold hover:bg-white hover:text-gray-900"
-              onClick={() => window.location.href = "/contact"}
+              onClick={() => (window.location.href = "/contact")}
             >
               Contact Us
             </button>
@@ -141,7 +148,7 @@ const Home = () => {
         >
           <div className="bg-white text-black px-10 py-10 border-t border-none flex flex-row shadow-2xl w-3/4 rounded-0">
             <div className="flex-col w-1/4 border-r border-slate-300 mr-3">
-              <p className="text-slate-500 text-sm ml-1">Select Category</p>
+              <p className="text-slate-500 text-sm ml-1">Select Machine</p>
               <select className="mt-2 p-0 border border-none rounded-lg w-3/4">
                 {categories.map((category) => (
                   <option value={category}>{category}</option>
@@ -149,7 +156,7 @@ const Home = () => {
               </select>
             </div>
             <div className="flex-col w-1/4 border-r border-slate-300 mr-3">
-              <p className="text-slate-500 text-sm ml-1">Pickup Location</p>
+              <p className="text-slate-500 text-sm ml-1">Project Location</p>
               <select className="mt-2 p-0 border border-none rounded-lg w-3/4">
                 {locations.map((location) => (
                   <option value={location}>{location}</option>
@@ -158,12 +165,39 @@ const Home = () => {
             </div>
             <div className="flex-col w-1/4 border-r border-slate-300 mr-4 pr-2">
               <p className="text-slate-500 text-sm ml-1">When</p>
-              <input
-                type="date"
-                className="mt-2 ml-0 p-0 border border-none rounded-lg w-full"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-              />
+              <div className="border border-none rounded-lg w-3/4 mt-2">
+                <p className="text-slate-500 text-sm ml-1">
+                  <span
+                    onClick={() => doShow(!show)}
+                    className="cursor-pointer hover:text-gray-900"
+                  >
+                    {date.toDateString()}
+                  </span>{" "}
+                  -
+                  <span
+                    onClick={() => doShowEnd(!showEnd)}
+                    className="cursor-pointer hover:text-gray-900"
+                  >
+                    {endDate.toDateString()}
+                  </span>
+                </p>
+              </div>
+              {show && (
+                <Calendar
+                  date={date}
+                  onChange={(date) => setDate(date)}
+                  showDateDisplay={false}
+                  className="absolute"
+                />
+              )}
+              {showEnd && (
+                <Calendar
+                  date={endDate}
+                  onChange={(date) => setEndDate(date)}
+                  showDateDisplay={false}
+                  className="absolute"
+                />
+              )}
             </div>
             <div className="flex-col w-1/4">
               <button
@@ -177,25 +211,12 @@ const Home = () => {
         </div>
       </div>
       <div className="mt-36">
-        <h1 className="text-4xl font-bold text-slate-900 text-center">
-          About Us
-        </h1>
-        <p className="text-lg text-gray-500 text-center mt-5">
-          Lorem Ipsum is simply dummy text of the<br></br> printing and
-          typesetting industry.
-        </p>
         <AboutUs />
       </div>
       <div className="mt-0">
-        <h1 className="text-4xl font-bold text-slate-900 text-center">
-          Services
-        </h1>
-        <p className="text-lg text-gray-500 text-center mt-5">
-          Lorem Ipsum is simply dummy text of the<br></br> printing and
-          typesetting industry.
-        </p>
         <Services />
       </div>
+
       <div className="mt-0 mb-20">
         <h1 className="text-4xl font-bold text-slate-900 text-center">
           Popular Equipment's On Rent
@@ -211,8 +232,8 @@ const Home = () => {
           How It Works
         </h1>
         <p className="text-lg text-gray-500 text-center mt-5">
-          Lorem Ipsum is simply dummy text of the<br></br> printing and
-          typesetting industry.
+          Ready to power your project?<br></br> Join Dyno Dash today and access top
+          equipment and talent instantly!
         </p>
         <HowItWorks />
       </div>

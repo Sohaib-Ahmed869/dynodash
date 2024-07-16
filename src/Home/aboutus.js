@@ -1,53 +1,26 @@
 import React from "react";
-import homeAboutUs from "../Assets/homeAboutUs.png";
+import homeAboutUs from "../Assets/man1.png";
 import aboutusicon from "../Assets/aboutusicon.png";
 const AboutUs = () => {
   return (
-
-    <div className="flex flex-row justify-center items-center p-36 pt-10 pb-20">
-       
-
-      <div className="w-1/2">
-        <img src={homeAboutUs} alt="homeAboutUs" style={{ height: "auto" }} />
+    <div className="flex flex-row justify-between items-center p-24 pt-10 pb-20">
+      <div className="w-2/3 flex-col">
+        <p className="text-2xl font-bold mb-3">About Us</p>
+        <p className="text-xl text-gray-500 mb-3 mr-20">
+          Dyno Dash is your go-to online platform for heavy machinery rentals,
+          premium lubrication products, and essential spare parts. We serve the
+          construction and industrial sectors, making equipment access simpler
+          and more efficient than ever. Our user-friendly website offers a wide
+          range of high-quality machinery - from excavators to bulldozers - all
+          available with just a few clicks. We complement our rental services
+          with top-grade lubricants and spare parts to keep your operations
+          running smoothly. At Dyno Dash, we're committed to powering your
+          projects with the right tools and support. Experience the perfect
+          blend of heavy-duty equipment and cutting-edge convenience.
+        </p>
       </div>
-      <div className="w-1/2 flex-col">
-        <p className="text-lg font-semibold text-gray-500 mb-3">
-          About Dyno Dash Equipment's Rental
-        </p>
-        <h1 className="text-4xl font-bold text-slate-900">
-          We Offer Smarter & More Affordable Access To Rent Construction
-          Equipment
-        </h1>
-        <div className="flex flex-row items-center mt-10 mb-10">
-          <img src={aboutusicon} alt="aboutusicon" style={{ height: "auto" }} />
-        </div>
-        <p className="text-lg font-semibold text-gray-500">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words.
-        </p>
-        <div className="flex flex-col justify-center items-center mt-10">
-          <div className="flex-row w-full flex justify-between">
-            <p className="text-xl font-bold text-slate-900 w-1/3">
-              The Facilities Less Expensive
-            </p>
-            <div className="border-l-2 ml-5 mr-10 border-gray-500 h-20"></div>
-            <p className="text-xl font-semibold text-gray-500 w-2/3">
-              Velit esse cillum dolore ipsum eu fugiat nulla pariatur.
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center mt-10">
-          <div className="flex-row w-full flex justify-between">
-            <p className="text-xl font-bold text-slate-900 w-1/3">
-              Innovating The Heavy Fleets
-            </p>
-            <div className="border-l-2 ml-5 mr-10 border-gray-500 h-20"></div>
-            <p className="text-xl font-semibold text-gray-500 w-2/3">
-              Excepteur sint occaecat cupidat non proident sunt iny.
-            </p>
-          </div>
-        </div>
+      <div className="w-1/3">
+        <img src={homeAboutUs} alt="homeAboutUs" style={{ height: "auto" }} />
       </div>
     </div>
   );
