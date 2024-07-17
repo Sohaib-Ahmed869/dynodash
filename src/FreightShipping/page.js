@@ -7,6 +7,10 @@ import { FaWarehouse } from "react-icons/fa";
 import { BiBox } from "react-icons/bi";
 import { GrLocation } from "react-icons/gr";
 import { GoAlert } from "react-icons/go";
+import inspectionServices from "../Assets/inspectionServices.png";
+import insurance from "../Assets/insurance.png";
+import certification from "../Assets/certification.png";
+import customClearances from "../Assets/customsClearance.png";
 
 const FreightShipping = () => {
   return (
@@ -41,7 +45,7 @@ const FreightShipping = () => {
           </h1>
 
           <div className="form-container flex flex-col items-center justify-center mt-10 w-full p-20 border-4 rounded-xl">
-            <h1 className="text-2xl font-bold text-gray-800 text-center">
+            <h1 className="text-5xl font-bold text-gray-800 text-center">
               Shipping Details
             </h1>
             <div className="flex flex-row items-center justify-between w-full mt-10">
@@ -183,6 +187,37 @@ const FreightShipping = () => {
             </div>
             <div className="flex flex-col w-full mt-10">
               <h2 className="text-lg font-bold text-gray-800">
+                Associated Services
+              </h2>
+            </div>
+            <div className="flex items-center gap-10 flex-wrap w-full mt-5">
+              <div className="checkbox border shadow-lg rounded-full flex items-center p-4 hover:border-gray-800 hover:border-2 cursor-pointer">
+                <input type="checkbox" className="mr-2" />
+                <img src={inspectionServices} alt="" className="w-5 h-5 mr-2" />
+                <p className="text-lg font-bold text-gray-800">
+                  Inspection Services
+                </p>
+              </div>
+              <div className="checkbox border shadow-lg rounded-full flex items-center p-4 hover:border-gray-800 hover:border-2 cursor-pointer">
+                <input type="checkbox" className="mr-2" />
+                <img src={insurance} alt="" className="w-5 h-5 mr-2" />
+                <p className="text-lg font-bold text-gray-800">Insurance</p>
+              </div>
+              <div className="checkbox border shadow-lg rounded-full flex items-center p-4 hover:border-gray-800 hover:border-2 cursor-pointer">
+                <input type="checkbox" className="mr-2" />
+                <img src={certification} alt="" className="w-5 h-5 mr-2" />
+                <p className="text-lg font-bold text-gray-800">Certification</p>
+              </div>
+              <div className="checkbox border shadow-lg rounded-full flex items-center p-4 hover:border-gray-800 hover:border-2 cursor-pointer">
+                <input type="checkbox" className="mr-2" />
+                <img src={customClearances} alt="" className="w-5 h-5 mr-2" />
+                <p className="text-lg font-bold text-gray-800">
+                  Custom Clearances
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col w-full mt-10">
+              <h2 className="text-lg font-bold text-gray-800">
                 Financing & payment deferral
               </h2>
             </div>
@@ -216,7 +251,10 @@ const FreightShipping = () => {
                 Contact Details
               </h2>
             </div>
-            <div className="p-10 mt-5 w-full" style={{ backgroundColor: "#FFF5ED" }}>
+            <div
+              className="p-10 mt-5 w-full"
+              style={{ backgroundColor: "#FFF5ED" }}
+            >
               <div className="flex flex-row items-center w-full">
                 <GoAlert className="text-4xl text-orange-500 mr-5" />
                 <p className="text-lg font-bold text-gray-800">

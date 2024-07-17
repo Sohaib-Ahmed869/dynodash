@@ -69,10 +69,7 @@ const PartDetails = () => {
               <p className="text-2xl font-semibold text-black">
                 Best Yanmar powered hydraulic excavator for rent.
               </p>
-              <p className="text-lg text-gray-500 mt-5">
-                {data.description}  
-              </p>
-
+              <p className="text-lg text-gray-500 mt-5">{data.description}</p>
 
               <p className="text-lg text-gray-500 mt-5 flex flex-row items-center">
                 <FaCheck className="text-sm text-yellow-500 me-3" />
@@ -222,7 +219,7 @@ const PartDetails = () => {
             <div className="w-full p-10 pt-0">
               <button
                 className="text-lg text-white bg-yellow-500 py-4 mt-4 w-full"
-                onClick={() => (window.location.href = "/cart")}
+                onClick={() => (window.location.href = "/freightshipping")}
               >
                 BOOK NOW
               </button>

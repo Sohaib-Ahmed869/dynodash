@@ -62,18 +62,18 @@ const Careers = () => {
           <span className="ml-4">CAREER</span>
         </button>
         <div className="flex flex-row items-center justify-center mt-10 p-40 pt-10 pb-10">
-          <div className="flex flex-col">
-            <p className="text-yellow-500">
-              [Premier Equipment Rental Service]
-            </p>
+          <div className="flex flex-col w-1/2">
+            <p className="text-yellow-500">[Dyno Dash Recruitment]</p>
             <h1 className="text-4xl font-bold">
-              We glad provide work to any Industry specialists
+              Powering Careers in Engineering and Technical Fields
             </h1>
           </div>
-          <p className="text-gray-400 text-left">
-            Kiusmod tempor sed incididunts labore sed dolor mag aliqua enimad
-            mini veniam quis nostrud exercitation ullamco labores nisi ut
-            aliquip ex ea reprehen deritin voluptate.
+          <p className="text-gray-400 text-left w-1/2">
+            We connect skilled engineers and technicians with exciting job
+            opportunities across various industries. Our platform is designed to
+            streamline the job search process, making it easier for
+            professionals to find roles that match their expertise and career
+            goals.
           </p>
         </div>
 
@@ -81,17 +81,20 @@ const Careers = () => {
           {data.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center p-5 m-5 bg-gray-50 border w-1/4"
+              className="flex relative flex-col items-center justify-center p-5 m-5 bg-gray-50 border w-1/4"
             >
+              <div className="absolute top-1 left-1 bg-gray-800 p-2 rounded-full">
+                <p className="text-yellow-500 text-sm">5 new listings</p>
+              </div>
               <img src={item.image} alt={item.name} className="h-12 w-12" />
               <h1 className="text-2xl font-bold mt-5">{item.name}</h1>
               <p className="text-gray-400 text-center mt-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                 tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
               </p>
-              <button className="bg-yellow-400 text-white py-2 px-6 rounded-lg mt-5">
-                Apply Now
-              </button>
+              <p className="text-yellow-500 mt-5 flex items-center">
+                View Job Listings <MdArrowForward className="ml-2" />
+              </p>
             </div>
           ))}
         </div>
