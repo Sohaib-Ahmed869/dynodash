@@ -21,6 +21,7 @@ import Shop from "./Shop/page";
 import SparePart from "./SparePartRent/page";
 import PartDetails from "./PartDetails/page";
 import FreightShipping from "./FreightShipping/page";
+import JobListings from "./JobListings/page";
 
 import AdminLogin from "./AdminScreens/AdminLogin";
 import ForgetPassword from "./AdminScreens/ForgetPassword";
@@ -57,6 +58,7 @@ const Layout = () => {
       <Route path="/sparepartrent" element={<SparePart />} />
       <Route path="/partdetails" element={<PartDetails />} />
       <Route path="/freightshipping" element={<FreightShipping />} />
+      <Route path="/joblistings" element={<JobListings />} />
 
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/admin/forgetpassword" element={<ForgetPassword />} />

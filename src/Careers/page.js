@@ -92,7 +92,7 @@ const Careers = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                 tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
               </p>
-              <p className="text-yellow-500 mt-5 flex items-center">
+              <p className="text-yellow-500 mt-5 flex items-center cursor-pointer" onClick={() => (window.location.href = "/joblistings")}>
                 View Job Listings <MdArrowForward className="ml-2" />
               </p>
             </div>

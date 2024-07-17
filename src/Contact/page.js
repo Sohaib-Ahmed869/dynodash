@@ -14,7 +14,38 @@ import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
+const MapComponent = () => {
+  const mapStyles = {
+    position: "relative",
+    textAlign: "right",
 
+  };
+
+  const canvasStyles = {
+    overflow: "hidden",
+    background: "none !important",
+
+
+  };
+
+  return (
+    <div style={mapStyles} className="mapouter w-full">
+      <div style={canvasStyles} className="gmap_canvas w-full">
+        <iframe
+          width="100%"
+          height="500"
+          id="gmap_canvas"
+          src="https://maps.google.com/maps?q=Johannesbu&t=&z=13&ie=UTF8&iwloc=&output=embed"
+
+          title="Google Map"
+        ></iframe>
+
+        <a href="https://textcaseconvert.com"></a>
+
+      </div>
+    </div>
+  );
+};
 const Contact = () => {
   return (
     <div>
@@ -39,7 +70,7 @@ const Contact = () => {
           <span className="ml-4">CONTACT US</span>
         </button>
       </div>
-      <div className="flex flex-row p-40 pt-20 ">
+      <div className="flex flex-row p-40 pb-5 pt-20 ">
         <div className="flex flex-col w-1/3 bg-black rounded pt-36 pb-36 pr-10 pl-10">
           <img src={FooterLogo} alt="FooterLogo" className="h-24 p-4 w-48" />
           <h1 className="text-lg text-white mt-5">
@@ -137,6 +168,7 @@ const Contact = () => {
           </button>
         </div>
       </div>
+      <MapComponent className='w-full'/>
       <Footer />
     </div>
   );
