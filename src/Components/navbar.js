@@ -37,14 +37,14 @@ const Navbar = () => {
           HOME
         </p>
       </div>
-      {/* <div className="flex items-center justify-center cursor-pointer px-4">
+      <div className="flex items-center justify-center cursor-pointer px-4">
         <p
           className="text-black font-semibold whitespace-nowrap"
-          onClick={() => (window.location.href = "/dashboard")}
+          onClick={() => (window.location.href = "/browse")}
         >
           BROWSE EQUIPMENT
         </p>
-      </div> */}
+      </div>
       <div class="group relative cursor-pointer">
         <div class="flex items-center justify-center bg-white px-4 h-full">
           <a class="menu-hover my-2 py-2 text-base font-medium text-black lg:mx-1">
@@ -82,7 +82,10 @@ const Navbar = () => {
             <FaChevronDown className="text-black font-bold" />
           </span>
         </div>
-        <div class="invisible absolute z-50 flex w-full flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible" style={{width: '150px'}}>
+        <div
+          class="invisible absolute z-50 flex w-full flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible"
+          style={{ width: "150px" }}
+        >
           <a
             class="my-2 block border-b border-gray-100 py-1 font-semibold text-sm text-gray-500 hover:text-black md:mx-2"
             onClick={() => (window.location.href = "/members")}

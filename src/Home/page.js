@@ -225,7 +225,7 @@ const Home = () => {
           Lorem Ipsum is simply dummy text of the<br></br> printing and
           typesetting industry.
         </p>
-        <Cards />
+        <Cards/>
       </div>
       <div className="mt-0">
         <h1 className="text-4xl font-bold text-slate-900 text-center">

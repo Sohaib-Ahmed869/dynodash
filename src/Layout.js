@@ -26,6 +26,8 @@ import AdminDashboard from "./AdminScreens/dashboard/main";
 
 import Error404 from "./Error/page";
 
+import BrowseEquipment from "./Browse/page";
+
 const Layout = () => {
   return (
     <Routes>
@@ -46,6 +48,7 @@ const Layout = () => {
       <Route path="/members" element={<MembersDirectory />} />
       <Route path="/details" element={<Details />} />
       <Route path="/excavatorrent" element={<ExcavatorRent />} />
+      <Route path="/browse" element={<BrowseEquipment />} />
 
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/admin/forgetpassword" element={<ForgetPassword />} />

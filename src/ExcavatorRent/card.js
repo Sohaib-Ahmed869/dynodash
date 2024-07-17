@@ -79,7 +79,10 @@ const Card = ({ item }) => {
             </p>
           </div>
         </div>
-        <button className="flex flex-row items-center text-center justify-center bg-[#efb007] text-white p-3 w-full h-1/4 rounded-0 border border-white text-sm font-semibold hover:bg-black transition duration-200">
+        <button
+          className="flex flex-row items-center text-center justify-center bg-[#efb007] text-white p-3 w-full h-1/4 rounded-0 border border-white text-sm font-semibold hover:bg-black transition duration-200"
+          onClick={() => (window.location.href = "/details")}
+        >
           BOOK NOW
         </button>
       </div>

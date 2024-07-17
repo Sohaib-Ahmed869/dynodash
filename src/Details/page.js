@@ -227,7 +227,7 @@ const Details = () => {
               </div>
             </div>
             <div className="w-full p-10 pt-0">
-              <button className="text-lg text-white bg-yellow-500 py-4 mt-4 w-full">
+              <button className="text-lg text-white bg-yellow-500 py-4 mt-4 w-full" onClick={() => (window.location.href = "/cart")}>
                 BOOK NOW
               </button>
             </div>

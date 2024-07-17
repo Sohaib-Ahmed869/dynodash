@@ -8,7 +8,7 @@ import rentalitem2 from "../Assets/rentalitem2.png";
 import bullet from "../Assets/bullet.png";
 import { MdArrowForward } from "react-icons/md";
 
-import './cards.css';
+import "./cards.css";
 
 const data = [
   {
@@ -111,105 +111,109 @@ const data = [
 
 const Cards = () => {
   return (
-    <Swiper
-      slidesPerView={4}
-      spaceBetween={0}
-      loop={true}
-      pagination={{
-        clickable: true,
-      }}
-      navigation={true}
-      modules={[Pagination, Navigation]}
-      className="mySwiper"
-    >
-      {data.map((item) => (
-        <SwiperSlide key={item.name} className="p-2 mb-20">
-          <div className="card shadow-xl items-center justify-center">
-            <img src={item.image} alt="rentalitem1" className="w-full h-64" />
-            <div className="p-3">
-              <h1 className="text-2xl font-bold text-slate-900">{item.name}</h1>
-              <div className="flex flex-row items-center mt-2">
-                <p className="text-yellow-500 mr-3">View Details</p>
-                <div className="border-r border-slate-600 h-6 mr-3"></div>
-                <p className="text-yellow-500">Print Quotation</p>
-              </div>
-            </div>
-            <div className="p-3">
-              <div className="flex flex-row items-center justify-between">
-                <div className="flex flex-row items-center">
-                  <img src={bullet} alt="bullet" />
-                  <p className="text-black font-semibold ml-1">
-                    Operating Weight: {item.operating_weight}
-                  </p>
-                </div>
-                <div className="flex flex-row items-center">
-                  <img src={bullet} alt="bullet" />
-                  <p className="text-black font-semibold ml-1">
-                    Manufacture Year: {item.manufacture_year}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="p-3">
-              <div className="flex flex-row items-center justify-between">
-                <div className="flex flex-row items-center">
-                  <img src={bullet} alt="bullet" />
-                  <p className="text-black font-semibold ml-1">
-                    Digging Weight: {item.digging_weight}
-                  </p>
-                </div>
-                <div className="flex flex-row items-center">
-                  <img src={bullet} alt="bullet" />
-                  <p className="text-black font-semibold ml-1">
-                    Max Reach: {item.max_reach}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-3 border-t border-slate-300 border-b flex flex-row item-center justify-between">
-              <div className="flex flex-col">
+    <div className="p-20 pt-0 pb-0"> 
+      <Swiper
+        slidesPerView={4}
+        spaceBetween={0}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {data.map((item) => (
+          <SwiperSlide key={item.name} className="p-2 mb-20">
+            <div className="card shadow-xl items-center justify-center">
+              <img src={item.image} alt="rentalitem1" className="w-full h-64" />
+              <div className="p-3">
                 <h1 className="text-2xl font-bold text-slate-900">
-                  Total Rental Price
+                  {item.name}
                 </h1>
-                <p className="text-md text-slate-900">(Incl. Taxes)</p>
+                <div className="flex flex-row items-center mt-2">
+                  <p className="text-yellow-500 mr-3">View Details</p>
+                  <div className="border-r border-slate-600 h-6 mr-3"></div>
+                  <p className="text-yellow-500">Print Quotation</p>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <p className="text-2xl font-bold text-yellow-500">
-                  ${item.rental_price * 0.8}
-                </p>
-                <p className="text-lg font text-gray-500 line-through text-right">
-                  ${item.rental_price}
-                </p>
+              <div className="p-3">
+                <div className="flex flex-row items-center justify-between">
+                  <div className="flex flex-row items-center">
+                    <img src={bullet} alt="bullet" />
+                    <p className="text-black font-semibold ml-1">
+                      Operating Weight: {item.operating_weight}
+                    </p>
+                  </div>
+                  <div className="flex flex-row items-center">
+                    <img src={bullet} alt="bullet" />
+                    <p className="text-black font-semibold ml-1">
+                      Manufacture Year: {item.manufacture_year}
+                    </p>
+                  </div>
+                </div>
               </div>
+              <div className="p-3">
+                <div className="flex flex-row items-center justify-between">
+                  <div className="flex flex-row items-center">
+                    <img src={bullet} alt="bullet" />
+                    <p className="text-black font-semibold ml-1">
+                      Digging Weight: {item.digging_weight}
+                    </p>
+                  </div>
+                  <div className="flex flex-row items-center">
+                    <img src={bullet} alt="bullet" />
+                    <p className="text-black font-semibold ml-1">
+                      Max Reach: {item.max_reach}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-3 border-t border-slate-300 border-b flex flex-row item-center justify-between">
+                <div className="flex flex-col">
+                  <h1 className="text-2xl font-bold text-slate-900">
+                    Total Rental Price
+                  </h1>
+                  <p className="text-md text-slate-900">(Incl. Taxes)</p>
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-2xl font-bold text-yellow-500">
+                    ${item.rental_price * 0.8}
+                  </p>
+                  <p className="text-lg font text-gray-500 line-through text-right">
+                    ${item.rental_price}
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row justify-between">
+                <div className="flex flex-row p-3 items-center">
+                  <MdArrowForward className="text-xl text-black border border-black rounded-full p-1" />
+                  <p className="text-black font-semibold ml-1">
+                    ${item.perdaycost} / Day
+                  </p>
+                </div>
+                <div className="flex flex-row p-3 items-center">
+                  <MdArrowForward className="text-xl text-black border border-black rounded-full p-1" />
+                  <p className="text-black font-semibold ml-1">
+                    ${item.perweekcost} / Week
+                  </p>
+                </div>
+                <div className="flex flex-row p-3 items-center">
+                  <MdArrowForward className="text-xl text-black border border-black rounded-full p-1" />
+                  <p className="text-black font-semibold ml-1">
+                    ${item.permonthcost} / Month
+                  </p>
+                </div>
+              </div>
+              <button className="mt-20 flex flex-row items-center text-center justify-center bg-black text-white p-3 w-full rounded-0 border border-white font-semibold hover:bg-white hover:text-gray-900">
+                BOOK NOW <MdArrowForward className="ml-4" />
+              </button>
             </div>
-            <div className="flex flex-row justify-between">
-              <div className="flex flex-row p-3 items-center">
-                <MdArrowForward className="text-xl text-black border border-black rounded-full p-1" />
-                <p className="text-black font-semibold ml-1">
-                  ${item.perdaycost} / Day
-                </p>
-              </div>
-              <div className="flex flex-row p-3 items-center">
-                <MdArrowForward className="text-xl text-black border border-black rounded-full p-1" />
-                <p className="text-black font-semibold ml-1">
-                  ${item.perweekcost} / Week
-                </p>
-              </div>
-              <div className="flex flex-row p-3 items-center">
-                <MdArrowForward className="text-xl text-black border border-black rounded-full p-1" />
-                <p className="text-black font-semibold ml-1">
-                  ${item.permonthcost} / Month
-                </p>
-              </div>
-            </div>
-            <button className="mt-20 flex flex-row items-center text-center justify-center bg-black text-white p-3 w-full rounded-0 border border-white font-semibold hover:bg-white hover:text-gray-900">
-              BOOK NOW <MdArrowForward className="ml-4" />
-            </button>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 
