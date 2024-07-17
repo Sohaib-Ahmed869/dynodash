@@ -17,6 +17,10 @@ import Confirmation from "./Confirmation/page";
 import MembersDirectory from "./MembersDirectory/page";
 import Details from "./Details/page";
 import ExcavatorRent from "./ExcavatorRent/page";
+import Shop from "./Shop/page";
+import SparePart from "./SparePartRent/page";
+import PartDetails from "./PartDetails/page";
+import FreightShipping from "./FreightShipping/page";
 
 import AdminLogin from "./AdminScreens/AdminLogin";
 import ForgetPassword from "./AdminScreens/ForgetPassword";
@@ -49,6 +53,10 @@ const Layout = () => {
       <Route path="/details" element={<Details />} />
       <Route path="/excavatorrent" element={<ExcavatorRent />} />
       <Route path="/browse" element={<BrowseEquipment />} />
+      <Route path="/shop" element={<Shop />} />
+      <Route path="/sparepartrent" element={<SparePart />} />
+      <Route path="/partdetails" element={<PartDetails />} />
+      <Route path="/freightshipping" element={<FreightShipping />} />
 
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/admin/forgetpassword" element={<ForgetPassword />} />
